@@ -1,0 +1,141 @@
+body {
+  background: linear-gradient(135deg, #ece9f7 0%, #a1c4fd 100%);
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  /* Add perspective for 3D effect */
+  perspective: 1200px;
+}
+
+form {
+  background: #fff;
+  max-width: 350px;
+  margin: 60px auto;
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(44, 62, 80, 0.25), 0 1.5px 8px rgba(44, 62, 80, 0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* 3D transform for card effect */
+  transform: rotateY(-8deg) rotateX(4deg) scale(1.03);
+  transition: transform 0.4s cubic-bezier(.25,.8,.25,1), box-shadow 0.4s;
+  /* Floating animation */
+  animation: floatCard 3.5s ease-in-out infinite;
+}
+
+form:hover {
+  transform: rotateY(0deg) rotateX(0deg) scale(1.06);
+  box-shadow: 0 24px 60px rgba(44, 62, 80, 0.30), 0 2px 12px rgba(44, 62, 80, 0.12);
+}
+
+@keyframes floatCard {
+  0%, 100% {
+    transform: translateY(0) rotateY(-8deg) rotateX(4deg) scale(1.03);
+  }
+  50% {
+    transform: translateY(-10px) rotateY(-6deg) rotateX(6deg) scale(1.05);
+  }
+}
+
+h2 {
+  color: #2d3a4b;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+}
+
+input {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1.1rem;
+  border: 1px solid #d1d9e6;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f7f9fa;
+  transition: border 0.2s, box-shadow 0.3s;
+  /* 3D inset shadow */
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.04) inset;
+}
+
+input:focus {
+  border: 1.5px solid #4a90e2;
+  outline: none;
+  /* 3D glow effect */
+  box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.18), 0 2px 8px rgba(44, 62, 80, 0.04) inset;
+}
+
+button[type="submit"] {
+  background: linear-gradient(90deg, #4a90e2 0%, #3578e5 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 0.7rem;
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.15), 0 1.5px 8px rgba(44, 62, 80, 0.08);
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  /* 3D raised effect */
+  transform: translateY(0);
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #3578e5 0%, #4a90e2 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 8px 24px rgba(44, 62, 80, 0.18);
+}
+
+button[type="submit"]:active {
+  /* 3D press effect */
+  transform: translateY(2px) scale(0.98);
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+}
+
+button[type="button"] {
+  background: #f0f4fa;
+  color: #3578e5;
+  border: 1px solid #d1d9e6;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.98rem;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s, color 0.2s, transform 0.15s, box-shadow 0.2s;
+  /* 3D raised effect */
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+  transform: translateY(0);
+}
+
+button[type="button"]:hover {
+  background: #e6f0ff;
+  color: #2d3a4b;
+  transform: translateY(-1.5px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
+}
+
+button[type="button"]:active {
+  transform: translateY(1.5px) scale(0.97);
+  box-shadow: 0 1px 4px rgba(44, 62, 80, 0.08);
+}
+
+p {
+  color: #6b7a8f;
+  margin: 0.5rem 0 1rem 0;
+  font-size: 0.97rem;
+  text-shadow: 0 1px 4px rgba(44, 62, 80, 0.04);
+}
+
+@media (max-width: 500px) {
+  form {
+    max-width: 95vw;
+    padding: 1.2rem 0.7rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  input, button {
+    font-size: 0.98rem;
+  }
+}
