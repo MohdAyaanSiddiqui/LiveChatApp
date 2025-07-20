@@ -57,9 +57,9 @@ const Login = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <h2>{isSignUp ? "Sign Up" : "Log In"}</h2>
-        <input type="email" placeholder="Enter Email" value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="off"/>
+        <input type="email" placeholder="Enter Email" style={{color:"black"}}  value={email} onChange={(e) => setEmail(e.target.value)} autoComplete="off"/>
 
-        <input type="password" placeholder="Enter Password" value={password} onChange={(e) => setPassword(e.target.value)} autoComplete="new-password"/>
+        <input type="password" placeholder="Enter Password" style={{color:"black"}} value={password} onChange={(e) => setPassword(e.target.value)} autoComplete="new-password"/>
         
         <button type="submit">{isSignUp ? "Sign Up" : "Log In"}</button>
         <p>

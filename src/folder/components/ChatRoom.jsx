@@ -78,6 +78,7 @@ const ChatRoom = () => {
           placeholder="Enter Message Here"
           value={newMessage}
           onChange={(e) => setNewMessage(e.target.value)}
+          style={{color:"black"}}
         />
         <button type="submit">Send</button>
       </form>
