@@ -205,3 +205,86 @@
   transform: scale(1.08);
   box-shadow: 0 4px 12px rgba(44, 62, 80, 0.14);
 }
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .chatroom-container {
+    max-width: 95%;
+    margin: 20px auto;
+    padding: 15px;
+    /* Reduce 3D effects on mobile */
+    transform: none;
+    animation: none;
+  }
+  
+  .chatroom-header {
+    padding: 10px 12px;
+  }
+  
+  .chatroom-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .message-list {
+    max-height: 350px;
+    padding: 8px;
+  }
+  
+  .message-bubble {
+    padding: 10px 12px;
+    max-width: 80%;
+    /* Reduce 3D effects on mobile */
+    transform: none;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.10);
+  }
+  
+  .message-bubble.own {
+    /* Simplify animation for better performance */
+    animation: popInBubble 0.5s cubic-bezier(.25,.8,.25,1);
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.15);
+  }
+  
+  .message-form {
+    flex-direction: column;
+  }
+  
+  .message-form input {
+    margin-bottom: 8px;
+    padding: 8px;
+  }
+  
+  .message-form button {
+    width: 100%;
+    padding: 8px;
+  }
+  
+  .del-btn {
+    padding: 3px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chatroom-container {
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 12px;
+  }
+  
+  .message-bubble {
+    max-width: 85%;
+    font-size: 0.9rem;
+  }
+  
+  .message-bubble strong {
+    font-size: 0.8rem;
+  }
+  
+  .message-bubble p {
+    font-size: 0.9rem;
+  }
+  
+  .message-bubble small {
+    font-size: 0.65rem;
+  }
+}
